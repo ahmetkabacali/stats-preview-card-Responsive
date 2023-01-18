@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+*{box-sizing: border-box;margin: 0;padding: 0;}
+html{background-color: hsl(233, 47%, 7%);}
+body{
+    color:hsl(0, 0%, 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img{width: 100%;height: 100%;}
+
+/* main-content */
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    max-width: 78rem;
+    max-height: 30.5rem;
+}
+.main-article{
+    display: grid;
+    grid-template-rows: 0.8fr 1fr 0.3fr;
+    padding: 5rem;
+    background-color: hsl(244, 38%, 16%);
+}
+.main-title{
+    font-family: 'Inter', sans-serif;
+    line-height: 1.3;
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+.main-title strong{color: hsl(277, 64%, 61%);}
+.main-text{
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.5);
+    line-height: 1.6rem;
+    font-size: 1rem;
+    word-spacing: 0.3rem;
+}
+.main-article .stats{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.stats-p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.5);
+    letter-spacing: 1.5px;
+    margin-top: 0.7rem;
+    padding-bottom: 2rem;
+}
+/* picture */
+.main-pictures{position: relative;}
+.main-pictures::after{
+    background-color: hsla(277, 89%, 22%, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    left: 0;
+}
+/* footer */
+.attribution { font-size: 11px; text-align: center; position: absolute;bottom: 10px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+/* Media */
+@media(max-width:930px){
+    .main-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        width: 90% ;
+    }
+    .main-article{
+        order:1
+    }
+    .main-pictures{
+        order: 0;
+    }
+    
+}
